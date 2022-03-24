@@ -1,0 +1,171 @@
+<div class="wrapper">
+
+
+ <app-top-nav-bar-chef-service></app-top-nav-bar-chef-service>
+
+
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+	  <div class="container-full">
+		<!-- Main content -->
+		<section class="content">
+      <div class="row">
+        <div class="col-12">
+          <div class="box">
+              <div class="box-body">
+                  <!-- Nav tabs -->
+                <ul class="nav nav-pills justify mb-20">
+                    <li class=" nav-item"> <a href="#navpills2-1" class="nav-link active" data-bs-toggle="tab" aria-expanded="false">Les membres</a> </li>
+                    <li class="nav-item"> <a href="#navpills2-2" class="nav-link" data-bs-toggle="tab" aria-expanded="false">Les phases</a> </li>
+                    <li class="nav-item"> <a href="#navpills2-3" class="nav-link" data-bs-toggle="tab" aria-expanded="true">Chef Projet</a> </li>
+                </ul>
+              </div>
+              <!-- /.box-body -->
+            </div>
+            <div class="box">
+              <div class="box-body">
+                  <!-- Tab panes -->
+                  <div class="tab-content">
+                    <div id="navpills2-1" class="tab-pane active">
+                          <div class="box-body p-15">
+                              <div class="table-responsive">
+                                  <table id="tickets" class="table mt-0 table-hover no-wrap table-borderless" data-page-size="10">
+                                      <thead>
+                                          <tr>
+                                              <th scope="col"><i class="ti-user"></i></th>
+                                              <th scope="col">Nom</th>
+                                              <th scope="col">Prenom</th>
+
+                                              <th scope="col">Telephone</th>
+
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+
+                                      <tr th:each="p:${membres}">
+                                              <th scope="row"> <a href="#" class="question_content"><i class="ti-user"></i></a></th>
+                                              <td th:text="${p.Nom}"></td>
+                                              <td th:text="${p.Prenom}"></td>
+                                              <td th:text="${p.telephone}"></td>
+
+
+
+
+
+                                          </tr>
+
+
+
+                                      </tbody>
+                                  </table>
+                              </div>
+                          </div>
+                      </div>
+                      <div id="navpills2-2" class="tab-pane">
+
+                          <div class="box-body p-15">
+                              <div class="table-responsive">
+                                  <table id="example1" class="table table-bordered table-striped" data-page-size="10">
+                                      <thead>
+                                          <tr>
+
+                                              <th scope="col">Nom</th>
+                                                  <th scope="col">Description</th>
+                                                  <th scope="col">delais</th>
+                                                  <th scope="col">Budget</th>
+                                                  <th scope="col">Status</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+
+                                              <tr th:each="p:${phases}">
+                                              <th scope="row"  th:text="${p.nom}"> <a href="#" class="question_content"></a></th>
+                                              <td th:text="${p.description}"></td>
+                                                 <td th:text="${p.delais}"></td>
+                                                    <td th:text="${p.budget}"></td>
+
+
+                                                  <td>
+
+
+                                                      <div class="progress">
+                                                          <div class="progress-bar progress-bar-striped" th:text=${p.status} role="progressbar" th:style="'width: '+${p.status} + '%;'" aria-valuenow="th:value=${p.status}"  aria-valuemax="100"></div>
+                                                        </div>
+                                          </tr>
+
+
+
+
+
+                                      </tbody>
+                                  </table>
+                              </div>
+                          </div>
+                      </div>
+                      <div id="navpills2-3" class="tab-pane">
+                          <div class="white_card_body">
+                              <div class="QA_section">
+                                  <div class="white_box_tittle list_header">
+                                      <h4>Chef Projet</h4>
+                                      <div class="box_right d-flex lms_block">
+                                          <div class="serach_field_2">
+                                              <div class="search_inner">
+
+
+                                              </div>
+                                          </div>
+
+                                      </div>
+                                  </div>
+
+
+
+                  <div class="single_user_pil d-flex align-items-center justify-content-between">
+                      <div class="user_pils_thumb d-flex align-items-center">
+                          <div class="avatar-lg mx-auto mb-4">
+                              <div class="avatar-title bg-soft-primary rounded-circle text-primary">
+                                  <i class="mdi mdi-account-circle display-4 m-0 text-primary"></i>
+                              </div>
+                          </div>
+                          <span class="f_s_14 f_w_400 text_color_11" th:text="${chefprojet.Nom}+' '+${chefprojet.Prenom}">Sidi ahmed</span>
+                      </div>
+                      <div class="user_info">
+                          Chef Projet
+                      </div>
+                      <div class="action_btns d-flex">
+                          <span class="f_s_14 f_w_400 text_color_11" th:text="${chefprojet.telephone}"></span>
+
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+                      </div>
+
+                  </div>
+              </div>
+          </div>
+
+
+      </div>
+  </div>
+		</section>
+		<!-- /.content -->
+	  </div>
+  </div>
+  <!-- /.content-wrapper -->
+<app-footer></app-footer>
+
+
+  <!-- /.control-sidebar -->
+
+  <!-- Add the sidebar's background. This div must be placed immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+
+</div>
+
+
+
+
+

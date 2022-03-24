@@ -1,0 +1,144 @@
+<div>
+  <!-- Topbar Start -->
+  <app-navbar-acc></app-navbar-acc>
+  <!-- Left Sidebar End -->
+
+  <!-- ============================================================== -->
+  <!-- Start Page Content here -->
+  <!-- ============================================================== -->
+
+  <div class="content-wrapper">
+      <div class="container-full">
+        <div class="content-header">
+            <div class="d-flex align-items-center">
+                <div class="me-auto">
+                    <h4 class="page-title">Clients</h4>
+                    <div class="d-inline-block align-items-center">
+                        <nav>
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#"><i class="mdi mdi-home-outline"></i></a></li>
+                                <li class="breadcrumb-item" aria-current="page">PlatServ</li>
+                                <li class="breadcrumb-item active" aria-current="page">Client</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- Main content -->
+        <section class="content">
+            <div class="row">
+                <div class="col-12">
+                    <div class="box">
+                      <div class="col-sm-6">
+                          <button data-bs-toggle="modal" data-bs-target="#con-close-modal" class="btn btn-info mb-2"><i class="mdi mdi-plus-circle me-1"></i> Ajouter</button>
+                      </div>
+                        <div class="box-body p-15">
+                            <div class="table-responsive">
+                              <table id="example1" class="table table-bordered table-striped">
+                                    <thead>
+                                      <tr>
+
+
+                                          <th>Nom</th>
+                                          <th>Prenom</th>
+                                          <th>Username</th>
+                                          <th>Telephone</th>
+                                          <th>Action</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <tr>
+                                          <td>Description</td>
+                                          <td>Budget</td>
+                                          <td>Delais</td>
+                                          <td>Etat</td>
+                                          <td>
+                                              <a  [routerLink]="'/mdfC'"  class="btn btn-primary">
+                                                  <span><i class="ti-marker-alt"></i>  Modifier</span>
+
+                                              </a>
+                                               <a  href="ModifierProjet.da?id=${p.id}" class="btn btn-danger">
+                                                 <span><i class="ti-trash"></i> Supprimer</span>
+
+                                              </a>
+
+                                          </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- /.content -->
+      </div>
+  </div>
+  <!-- sample modal content -->
+
+<div id="con-close-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h4 class="modal-title">Ajouter Client</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+           <form action="SaveAcc.html" method="post">
+          <div class="modal-body p-4">
+
+              <div class="row">
+                  <div class="col-md-6">
+                      <div class="mb-3">
+                          <label for="field-1" class="form-label">Nom</label>
+                          <input type="text" class="form-control" id="field-1" placeholder="nom" name="nom">
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                      <div class="mb-3">
+                          <label for="field-2" class="form-label">Prenom</label>
+                          <input type="text" class="form-control" id="field-2" placeholder="prenom" name="prenom">
+                      </div>
+                  </div>
+              </div>
+
+              <div class="row">
+                  <div class="col-md-4">
+                      <div class="mb-3">
+                          <label for="field-4" class="form-label">telephone</label>
+                          <input type="number" class="form-control" id="field-4" placeholder="telephone" name="tel">
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="mb-3">
+                          <label for="field-5" class="form-label">username</label>
+                          <input type="text" class="form-control" id="field-5" placeholder="username" name="user">
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="mb-3">
+                          <label for="field-6" class="form-label">Password</label>
+                          <input type="password" class="form-control" id="field-6" placeholder="password" name="pass">
+                      </div>
+                  </div>
+              </div>
+
+          </div>
+          <div class="modal-footer">
+              <button type="reset" class="btn btn-secondary waves-effect" data-bs-dismiss="modal">Annuler</button>
+              <button type="submit" class="btn btn-info waves-effect waves-light">Enregistrer</button>
+          </div>
+            </form>
+      </div>
+  </div>
+</div><!-- /.modal -->
+
+  <!-- ============================================================== -->
+  <!-- End Page content -->
+  <!-- ============================================================== -->
+</div>
+

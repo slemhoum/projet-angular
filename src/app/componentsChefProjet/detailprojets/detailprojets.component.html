@@ -1,0 +1,153 @@
+
+
+<app-navbar></app-navbar>
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+  <div class="container-full">
+  <!-- Main content -->
+  <section class="content">
+    <div class="row">
+      <div class="col-12">
+
+          <div class="box">
+              <div class="box-body">
+                  <!-- Nav tabs -->
+                  <ul class="nav nav-tabs customtab2" role="tablist">
+                      <li class="nav-item"> <a class="nav-link active" data-bs-toggle="tab" href="#home7" role="tab"><span class="hidden-sm-up"><i class="ion-home"></i></span> <span class="hidden-xs-down">Les membres</span></a> </li>
+                      <li class="nav-item"> <a class="nav-link" data-bs-toggle="tab" href="#profile7" role="tab"><span class="hidden-sm-up"><i class="ion-person"></i></span> <span class="hidden-xs-down">Les phases</span></a> </li>
+
+                  </ul>
+              </div>
+              <!-- /.box-body -->
+            </div>
+<div class="box">
+              <div class="box-body">
+                  <!-- Tab panes -->
+       <div class="tab-content">
+          <div class="tab-pane active" id="home7" role="tabpanel">
+  <div class="box-header with-border">
+                  <div class="text-right">
+                      <a routerLink="/ajouterMembre1"   class="btn btn-primary">
+                          <span><i class="ti-plus"></i> Ajouter</span>
+
+                      </a>
+              </div>
+  </div>
+              <div class="box-body p-15">
+                  <div class="table-responsive">
+                    <table id="example1" class="table table-bordered table-striped">
+        <thead>
+
+          <tr>
+                <th>Nom</th>
+            <th>Prenom</th>
+            <th>Telephone</th>
+
+                <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr th:each="p:${membres}">
+                                  <td th:text="${p.Nom}"></td>
+            <td th:text="${p.Prenom}"></td>
+            <td th:text="${p.telephone}"></td>
+
+            <td>
+                                      <a href="" class="btn btn-danger">
+                                          <span><i class="ti-trash"></i> Supprimer</span>
+
+                                      </a>
+
+            </td>
+          </tr>
+
+
+
+
+
+
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+          <div class="tab-pane" id="profile7" role="tabpanel">
+              <div class="box-header with-border">
+                  <div class="text-right">
+                      <a routerLink="/ajouterPhase"   class="btn btn-primary">
+                          <span><i class="ti-plus"></i> Ajouter</span>
+
+                      </a>
+              </div>
+  </div>
+              <div class="box-body p-15">
+                  <div class="table-responsive">
+                    <table id="example" class="table table-bordered table-striped">
+        <thead>
+          <tr>
+                                  <th>Nom</th>
+                <th>Description</th>
+            <th>Budget</th>
+            <th>Delais</th>
+                                  <th>Status</th>
+                <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr th:each="p:${phases}">
+                                   <td th:text="${p.nom}"></td>
+                                     <td th:text="${p.description}"></td>
+             <td th:text="${p.budget}"></td>
+
+                       <td th:text="${p.delais}"></td>
+                       <td>
+             <div class="progress">
+                                              <div class="progress-bar progress-bar-striped" th:text=${p.status} role="progressbar" th:style="'width: '+${p.status} + '%;'" aria-valuenow="th:value=${p.status}"  aria-valuemax="100"></div>
+                                            </div>
+                                            </td>
+            <td>
+                                      <a routerLink="/modifierPhase" class="text-info me-10" data-bs-toggle="tooltip" data-bs-original-title="Modifier">
+                                          <i class="ti-marker-alt"></i>
+                                      </a>
+              <a   href="deletePhase.html"  class="text-danger" data-bs-toggle="tooltip" data-bs-original-title="Supprimer"><i class="ti-trash" aria-hidden="true"></i></a>
+
+            </td>
+          </tr>
+
+
+
+
+
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+          </div>
+      </div>
+  </div>
+</div>
+</div>
+  </div>
+  </section>
+  <!-- /.content -->
+  </div>
+</div>
+<!-- /.content-wrapper -->
+<app-footer></app-footer>
+
+
+<!-- /.control-sidebar -->
+
+<!-- Add the sidebar's background. This div must be placed immediately after the control sidebar -->
+
+
+
+
+
+

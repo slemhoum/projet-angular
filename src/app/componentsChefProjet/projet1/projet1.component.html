@@ -1,0 +1,82 @@
+
+
+<app-navbar></app-navbar>
+
+
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+  <div class="container-full">
+  <!-- Main content -->
+  <section class="content">
+    <div class="row">
+      <div class="col-12">
+<div class="box">
+
+              <div class="box-body p-15">
+                  <div class="table-responsive">
+                    <table id="example1" class="table table-bordered table-striped">
+        <thead>
+          <tr>
+             <th>Description</th>
+            <th>Budget</th>
+            <th>Delais</th>
+                                  <th>Etat</th>
+                <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr th:each="p:${projets}">
+        <td th:text="${p.description}"></td>
+                               <td th:text="${p.budgetSpecific}"></td>
+           <td th:text="${p.delais}"></td>
+
+
+            <td> <div class="progress">
+                                      <div class="progress-bar progress-bar-primary progress-bar-striped" th:text=${p.etat} role="progressbar" aria-valuenow="th:value=${p.etat}"  aria-valuemax="100" th:style="'width: '+${p.etat} + '%;'">
+
+                                      </div>
+                                    </div></td>
+
+            <td>
+                                      <a routerLink="/detailProjet1"  class="btn btn-primary">
+                                          <span><i class="ti-eye"></i> Info</span>
+
+                                      </a>
+                                       <a  routerLink="/modifierProjet1" class="btn btn-warning">
+                                          <span><i class="ti-marker-alt"></i> Modifier</span>
+
+                                      </a>
+
+            </td>
+          </tr>
+
+
+
+
+
+
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</div>
+  </div>
+  </section>
+  <!-- /.content -->
+  </div>
+</div>
+<!-- /.content-wrapper -->
+<app-footer></app-footer>
+
+
+<!-- /.control-sidebar -->
+
+<!-- Add the sidebar's background. This div must be placed immediately after the control sidebar -->
+
+
+
+
+

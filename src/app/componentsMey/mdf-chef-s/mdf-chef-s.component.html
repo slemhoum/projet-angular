@@ -1,0 +1,87 @@
+<div>
+  <app-navbar1></app-navbar1>
+    <div class="content-wrapper">
+  <div class="container-full">
+    <div class="content-header">
+        <div class="d-flex align-items-center">
+            <div class="me-auto">
+                <h4 class="page-title">ChefService</h4>
+                <div class="d-inline-block align-items-center">
+                    <nav>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#"><i class="mdi mdi-home-outline"></i></a></li>
+                            <li class="breadcrumb-item" aria-current="page">PlatServ</li>
+                            <li class="breadcrumb-item active" aria-current="page">chefService</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+            <div class="col-12">
+              <div class="box">
+                  <div class="box-header with-border">
+                    <h4 class="box-title">Modifier les information chefService</h4>
+                  </div>
+                <div class="box-body">
+                  <form action="updateEtat.da" method="Post">
+                      <div class="form-body">
+                          <div class="row">
+                              <div class="col-md-6">
+                                  <div class="mb-3">
+                                      <label for="field-1" class="form-label">Nom</label>
+                                      <input type="text" class="form-control" id="field-1" value="${acc.nom}" placeholder="nom" name="nom">
+                                        <input type="hidden" class="form-control" value="${acc.id}"  name="id">
+                                  </div>
+                              </div>
+                              <div class="col-md-6">
+                                  <div class="mb-3">
+                                      <label for="field-2" class="form-label">Prenom</label>
+                                      <input type="text" class="form-control" id="field-2" placeholder="prenom" value="${acc.prenom}" name="prenom">
+                                  </div>
+                              </div>
+                          </div>
+
+                          <div class="row">
+                              <div class="col-md-4">
+                                  <div class="mb-3">
+                                      <label for="field-4" class="form-label">telephone</label>
+                                      <input type="number" class="form-control" id="field-4" placeholder="telephone" name="tel" value="${acc.tel}">
+                                  </div>
+                              </div>
+                              <div class="col-md-4">
+                                  <div class="mb-3">
+                                      <label for="field-5" class="form-label">username</label>
+                                      <input type="text" class="form-control" id="field-5" placeholder="username" name="user" value="${acc.username}">
+                                  </div>
+                              </div>
+                              <div class="col-md-4">
+                                  <div class="mb-3">
+                                      <label for="field-6" class="form-label">Password</label>
+                                      <input type="password" class="form-control" id="field-6" placeholder="password" name="pass" value="${acc.password}">
+                                  </div>
+                              </div>
+                          </div>
+
+
+                      </div>
+                      <div class="form-actions mt-10">
+                          <button type="submit" class="btn btn-primary"> <i class="fa fa-check"></i> Modifier</button>
+                          <button type="reset" class="btn btn-danger">Annuler</button>
+                      </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- /.content -->
+  </div>
+</div>
+</div>
+

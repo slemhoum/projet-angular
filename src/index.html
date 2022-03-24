@@ -5,9 +5,121 @@
   <title>ProjetAngulaire1</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" href="assets/images/favicon.ico">
+
+  <title>PlatServ</title>
+
+<!-- Vendors Style-->
+<link rel="stylesheet" href="assets/css/vendors_css.css">
+
+<!-- Style-->
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/skin_color.css">
 </head>
-<body>
+<body class="hold-transition light-skin sidebar-mini theme-primary fixed">
   <app-root></app-root>
+  <!-- Vendor JS -->
+	<script src="assets/js/vendors.min.js"></script>
+
+    <script src="assets/icons/feather-icons/feather.min.js"></script>
+    <script src="assets/vendor_components/bootstrap-select/dist/js/bootstrap-select.js"></script>
+
+    <script src="assets/vendor_components/select2/dist/js/select2.full.js"></script>
+    <script src="assets/js/pages/advanced-form-element.js"></script>
+	<script src="assets/vendor_components/apexcharts-bundle/dist/apexcharts.js"></script>
+	<script src="assets/vendor_components/jvectormap/lib2/jquery-jvectormap-2.0.2.min.js"></script>
+    <script src="assets/vendor_components/jvectormap/lib2/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="assets/vendor_components/datatable/datatables.min.js"></script>
+	<!-- Master Admin App -->
+	<script src="assets/js/template.js"></script>
+  <script src="assets/js/pages/data-table.js"></script>
+
+  <script type="text/javascript">
+		$(document).ready(function(){
+
+
+
+			var optionDonut = {
+		  chart: {
+			  type: 'donut',
+			  width: '100%',
+			  height: 230
+		  },
+		  dataLabels: {
+			enabled: true,
+			  formatter: function (val) {
+				  return val + "%"
+				},
+			   style: {
+				  fontSize: '16px',
+				  fontWeight: 'normal',
+			  },
+		  },
+		  plotOptions: {
+			pie: {
+			  customScale: 0.9,
+			  donut: {
+				size: '50%',
+			  },
+			  offsetY: 0,
+			},
+			stroke: {
+			  colors: undefined
+			}
+		  },
+		  colors: ['#007eff', '#2a8853', '#fb3d4e'],
+		  series: [2,1,3],
+		  labels: ['Accepter', 'Attente', 'Refuser'],
+		  legend: {
+			show: true,
+		  }
+		}
+
+		var donut = new ApexCharts(
+		  document.querySelector("#shops-trend"),
+		  optionDonut
+		)
+		donut.render();
+
+	});
+
+	</script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+
+
+      var options = {
+            series: [2,5],
+        labels: ['Projet complete','Projet en cours'],
+            chart: {
+            width: 202,
+            type: 'donut',
+          },
+      colors: ['#7367F0', '#EA5455'],
+          dataLabels: {
+            enabled: false
+          },
+          responsive: [{
+            breakpoint: 480,
+            options: {
+              chart: {
+                width: 200
+              },
+              legend: {
+                show: false
+              }
+            }
+          }],
+          legend: {
+            show: false
+          }
+          };
+
+          var chart = new ApexCharts(document.querySelector("#analytics_chart"), options);
+          chart.render();
+
+    });
+
+    </script>
 </body>
 </html>

@@ -1,0 +1,61 @@
+
+
+<app-navbar></app-navbar>
+
+
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+  <div class="container-full">
+  <!-- Main content -->
+  <section class="content">
+    <div class="row">
+      <div class="col-12">
+        <div class="box">
+            <div class="box-header with-border">
+              <h4 class="box-title">Modifier Etat Projet</h4>
+            </div>
+          <div class="box-body">
+            <form th:action="@{updateProjet}" method="Post">
+                <div class="form-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                              <label class="fw-700 fs-16 form-label">Etat</label>
+                              <input type="number" class="form-control" th:value="${projet.etat}"  name="etat">
+                                 <input type="hidden" class="form-control"  th:value="${projet.id_project}"   name="id">
+                            </div>
+                        </div>
+                        <!--/span-->
+
+                        <!--/span-->
+                    </div>
+
+
+                </div>
+                <div class="form-actions mt-10">
+                    <button type="submit" class="btn btn-primary"> <i class="fa fa-check"></i> Modifier</button>
+                    <button type="reset" class="btn btn-danger">Annuler</button>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+  </div>
+  </section>
+  <!-- /.content -->
+  </div>
+</div>
+<!-- /.content-wrapper -->
+<app-footer></app-footer>
+
+
+<!-- /.control-sidebar -->
+
+<!-- Add the sidebar's background. This div must be placed immediately after the control sidebar -->
+
+
+
+
+
+

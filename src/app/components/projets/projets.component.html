@@ -1,0 +1,87 @@
+
+<div class="wrapper">
+
+
+ <app-top-nav-bar-chef-service></app-top-nav-bar-chef-service>
+
+
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+	  <div class="container-full">
+		<!-- Main content -->
+		<section class="content">
+      <div class="row">
+        <div class="col-12">
+  <div class="box">
+
+
+                <div class="box-body">
+                    <div class="table-responsive">
+                      <table id="example" class="table table-bordered table-striped">
+          <thead>
+            <tr>
+                                    <th scope="col">Description</th>
+                                    <th scope="col">Budget Total</th>
+                                    <th scope="col">Budget Projet</th>
+                                    <th scope="col">delais</th>
+                                    <th scope="col">Etat</th>
+                   <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+                                    <td th:text="${p.description}"></td>
+                                    <td th:text="${p.budgetTotal}"></td>
+                                    <td th:text="${p.budgetSpecific}"></td>
+                                    <td th:text="${p.delais}"></td>
+
+                                <td>
+                                            <div class="progress">
+                                                <div class="progress-bar progress-bar-primary progress-bar-striped"  role="progressbar" aria-valuenow="50"  aria-valuemax="100" style="width:50%">
+
+                                                </div>
+                                              </div></td>
+
+                                            <td>
+                                                <a   routerLink="/detailProjet"  class="btn btn-circle btn-info btn-xs" data-toggle="tooltip" data-original-title="detail">
+                                                    <i class="ti-eye"></i>
+                                                </a>
+                                                <a  routerLink="/modifierProjet"  class="btn btn-circle btn-primary btn-xs" data-toggle="tooltip" data-original-title="modifier">
+                                                    <i class="ti-marker-alt"></i>
+                                                </a>
+
+                                                <a  href="" class="btn btn-circle btn-danger btn-xs" title="" data-toggle="tooltip" data-original-title="Supprimer"><i class="ti-trash"></i></a>
+                                            </td>
+            </tr>
+
+
+
+
+
+
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+		</section>
+		<!-- /.content -->
+	  </div>
+  </div>
+  <!-- /.content-wrapper -->
+<app-footer></app-footer>
+
+
+  <!-- /.control-sidebar -->
+
+  <!-- Add the sidebar's background. This div must be placed immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+
+</div>
+
+
+
