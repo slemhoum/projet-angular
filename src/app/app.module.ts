@@ -38,6 +38,11 @@ import { ServicesComponent } from './componentsMey/services/services.component';
 import { Client1Component } from './componentsMey/client1/client1.component';
 import { NavbarAccComponent } from './componentsMey/navbar-acc/navbar-acc.component';
 import { Navbar1Component } from './componentsMey/navbar1/navbar1.component';
+import { LoginComponent } from './login/login.component';
+import { MsgDangerComponent } from './msg-danger/smg-danger/msg-danger.component';
+
+import { FormsModule } from '@angular/forms';
+import { HomeAdminComponent } from './componentsMey/home-admin/home-admin.component';
 
 @NgModule({
   declarations: [
@@ -68,7 +73,9 @@ import { Navbar1Component } from './componentsMey/navbar1/navbar1.component';
     AccComponent,
 
     ChefServiceComponent,
-
+LoginComponent,
+MsgDangerComponent,
+HomeAdminComponent,
     DemandeAccComponent,
     DetailSComponent,
     MdfAccComponent,
@@ -81,7 +88,8 @@ import { Navbar1Component } from './componentsMey/navbar1/navbar1.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

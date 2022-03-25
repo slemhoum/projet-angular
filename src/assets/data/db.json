@@ -1,0 +1,38 @@
+{
+    "users": [
+        { "firstName": "Said", "mdp": "123", "tel": "chefs", "email": "am@gmail.com", "dateN": "1950-02-03", "profil": "test", "id": 20 },
+        { "firstName": "Ali", "mdp": "1234", "tel": "chefp", "email": "mm@gmail.com", "dateN": "1920-08-10", "profil": "test", "id": 1 },
+        { "firstName": "Amine", "mdp": "12345", "tel": "42314768", "email": "dm@gmail.com", "dateN": "2000-12-12", "profil": "test", "id": 3 },
+        { "firstName": "Sali", "mdp": "12345", "tel": "42314768", "email": "dm@gmail.com", "dateN": "2000-12-12", "profil": "test", "id": 4 },
+        { "firstName": "Ahmed", "mdp": "12345", "tel": "42314768", "email": "dm@gmail.com", "dateN": "2000-12-12", "profil": "test", "id": 0 },
+        { "firstName": "Sidi", "mdp": "12345", "tel": "Acc", "email": "dm@gmail.com", "dateN": "2000-12-12", "profil": "test", "id": 6 },
+        { "firstName": "vadel", "mdp": "12345", "tel": "42314768", "email": "dm@gmail.com", "dateN": "2000-12-12", "profil": "test", "id": 7 },
+        { "firstName": "Mariem", "mdp": "12345", "tel": "42314768", "email": "dm@gmail.com", "dateN": "2000-12-12", "profil": "test", "id": 8 },
+        { "firstName": "Mine", "mdp": "12345", "tel": "admin", "email": "dm@gmail.com", "dateN": "2000-12-12", "profil": "test", "id": 9 },
+        { "firstName": "Brahim", "mdp": "12345", "tel": "42314768", "email": "dm@gmail.com", "dateN": "2000-12-12", "profil": "test", "id": 10 },
+
+
+        { "firstName": "Emine", "mdp": "12345", "tel": "42314768", "email": "dm@gmail.com", "dateN": "2000-12-12", "profil": "test", "id": 11 },
+        { "firstName": "Rouka", "mdp": "12345", "tel": "42314768", "email": "dm@gmail.com", "dateN": "2000-12-12", "profil": "test", "id": 12 },
+        { "firstName": "Titi", "mdp": "12345", "tel": "42314768", "email": "dm@gmail.com", "dateN": "2000-12-12", "profil": "test", "id": 13 },
+        { "firstName": "Fati", "mdp": "12345", "tel": "42314768", "email": "dm@gmail.com", "dateN": "2000-12-12", "profil": "test", "id": 14 },
+        { "firstName": "taha", "mdp": "12345", "tel": "42314768", "email": "dm@gmail.com", "dateN": "2000-12-12", "profil": "test", "id": 15 },
+        { "firstName": "Lemin", "mdp": "12345", "tel": "42314768", "email": "dm@gmail.com", "dateN": "2000-12-12", "profil": "test", "id": 16 },
+        { "firstName": "Mohamed", "mdp": "12345", "tel": "42314768", "email": "dm@gmail.com", "dateN": "2000-12-12", "profil": "test", "id": 17 },
+        { "firstName": "Moud", "mdp": "12345", "tel": "42314768", "email": "dm@gmail.com", "dateN": "2000-12-12", "profil": "test", "id": 18 },
+        { "firstName": "Bede", "mdp": "12345", "tel": "42314768", "email": "dm@gmail.com", "dateN": "2000-12-12", "profil": "test", "id": 19 }
+    ],
+    "version": {
+        "desc": "Semainaire - gestion des courses",
+        "number": "1.7",
+        "date": "13:00 14 avril 2020"
+    },
+    "refs": [
+        { "code": "type", "lib": "Type de voiture" },
+        { "code": "annee", "lib": "Année modèle" },
+        { "code": "marque", "lib": "Marque de voiture" },
+        { "code": "etat", "lib": "L'etat de la voiture" },
+        { "code": "profil", "lib": "Profiles   " },
+        { "code": "couleur", "lib": "Couleur de voiture" }
+    ]
+}

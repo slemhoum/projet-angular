@@ -1,0 +1,46 @@
+<div>        <div class="login">
+    <div class="login__content">
+        <div class="login__img">
+            <img src="assets/assets1/img/imgg3.svg" alt=""/>
+        </div>
+
+        <div class="login__forms">
+           
+                <h1 class="login__title">S'identifier</h1>
+                <p style="color:red" class="mb-0"></p>
+
+                <div class="login__box">
+                    <i class='bx bx-user login__icon'></i>
+                    <input type="text" placeholder="Username" class="login__input"  name="firstName" [(ngModel)]="user.firstName" />
+                </div>
+
+                <div class="login__box">
+                    <i class='bx bx-lock-alt login__icon'></i>
+                    <input type="password" placeholder="Password" class="login__input"  name="mdp"  [(ngModel)]="user.mdp" />
+                </div>
+                <div class="login__box">
+                    <i class='bx bx-check login__icon'></i>
+                    <select type="text"  class="login__input"  name="tel" [(ngModel)]="user.tel">
+                        <option value="admin">Admin</option>
+                        <option value="chefservice">Chef Service</option>
+                         <option value="chefprojet">Chef Projet</option>
+                          <option value="accueil">Accueilleur</option>
+                           <option value="directeur">Directeur</option>
+                       </select>
+                </div>
+
+
+               
+                <button class="btn btn-primary" (click)="logIn(user)">Se connecter</button>
+               
+
+                <div class="mt-2">
+                    <msg-danger [msg]="'Email ou mot de passe incorrecte!'"
+                                *ngIf="msgErr"></msg-danger>
+                  </div>
+           
+
+      
+        </div>
+    </div>
+</div></div>

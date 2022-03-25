@@ -13,7 +13,6 @@ import { ModifierMembreComponent } from './components/modifier-membre/modifier-m
 import { ModifierProjetComponent } from './components/modifier-projet/modifier-projet.component';
 import { DetailProjetComponent } from './components/detail-projet/detail-projet.component';
 import { HomeChefProjetComponent } from './componentsChefProjet/home-chef-projet/home-chef-projet.component';
-
 import { Projet1Component } from './componentsChefProjet/projet1/projet1.component';
 import { ModifierprojetsComponent } from './componentsChefProjet/modifierprojets/modifierprojets.component';
 import { DetailprojetsComponent } from './componentsChefProjet/detailprojets/detailprojets.component';
@@ -21,9 +20,7 @@ import { AjouterMembre1Component } from './componentsChefProjet/ajouter-membre1/
 import { AjouterPhaseComponent } from './componentsChefProjet/ajouter-phase/ajouter-phase.component';
 import { ModifierPhaseComponent } from './componentsChefProjet/modifier-phase/modifier-phase.component';
 import { AccComponent } from './componentsMey/acc/acc.component';
-
 import { ChefServiceComponent } from './componentsMey/chef-service/chef-service.component';
-
 import { DemandeAccComponent } from './componentsMey/demande-acc/demande-acc.component';
 import { DetailSComponent } from './componentsMey/detail-s/detail-s.component';
 import { MdfAccComponent } from './componentsMey/mdf-acc/mdf-acc.component';
@@ -31,9 +28,12 @@ import { MdfChefSComponent } from './componentsMey/mdf-chef-s/mdf-chef-s.compone
 import { ProjetAdminComponent } from './componentsMey/projet-admin/projet-admin.component';
 import { ServicesComponent } from './componentsMey/services/services.component';
 import { Client1Component } from './componentsMey/client1/client1.component';
+import { LoginComponent } from './login/login.component';
+import { HomeAdminComponent } from './componentsMey/home-admin/home-admin.component';
 
 const routes: Routes = [
   {path:"homeChefService",component:HomeChefServiceComponent},
+  {path:"homeAdmin",component:HomeAdminComponent},
   {path:"demandes",component:ListeDemandesComponent},
   {path:"ajoutProjet",component: AjoutProjetComponent},
   {path:"listeChefProjets",component: ListeChefProjetsComponent },
@@ -52,6 +52,8 @@ const routes: Routes = [
   {path:"detailProjet1",component:   DetailprojetsComponent },
   {path:"ajouterPhase",component:  AjouterPhaseComponent },
   {path:"modifierPhase",component:  ModifierPhaseComponent },
+  {path:"login",component:  LoginComponent },
+
   {
     path: 'Acc',
     component: AccComponent
