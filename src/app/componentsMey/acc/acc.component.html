@@ -50,23 +50,24 @@
                                     </thead>
                                     <tbody>
 
-                                        <tr>
-                                          <td>Description</td>
-                                          <td>Budget</td>
-                                          <td>Delais</td>
-                                          <td>Etat</td>
-                                          <td>
-                                              <a  [routerLink]="'/mdfA'" class="btn btn-primary">
-                                                  <span><i class="ti-marker-alt"></i>  Modifier</span>
-
-                                              </a>
-                                               <a  href="ModifierProjet.da?id=${p.id}" class="btn btn-danger">
-                                                 <span><i class="ti-trash"></i> Supprimer</span>
-
-                                              </a>
-
-                                          </td>
-                                        </tr>
+                                        <tr *ngFor="let cp of Acc">
+                                            <th scope="row"> <a href="#" class="question_content"><i class="ti-user"></i></a></th>
+                      <td >{{cp.nom}}</td>
+                    <td >{{cp.prenom}}</td>
+                    <td >{{cp.username}}</td>
+                    <td >{{cp.Tel}}</td>
+        
+        
+        
+                      <td>
+                        <button  routerLink="/modifierAcc"    class="btn btn-circle btn-primary btn-xs" data-toggle="tooltip" data-original-title="modifier">
+                          <i class="ti-marker-alt"></i>
+                        </button>
+        
+                        <button  class="btn btn-circle btn-danger btn-xs" title="" data-toggle="tooltip" (click)="deleteAcc(cp)" data-original-title="Supprimer"><i class="ti-trash"></i></button>
+        
+                      </td>
+                    </tr>
 
 
 

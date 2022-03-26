@@ -30,9 +30,82 @@
     }
   ],
 
+  "Service": [
+    {
+      "id": 2,
+      "nom": "Metenance",
+      "ChefService": "babe"
+     
+    },
+    {
+      "id": 1,
+      "nom": "Application web",
+      "ChefService": "babe"
+     
+    },
+    {
+      "id": 3,
+      "nom": "Application mobile",
+      "ChefService": "babe"
+     
+    }
 
+
+  ],
 
   "ChefProjet": [
+    {
+      "id": 2,
+      "nom": "Ahmed",
+      "prenom": "babe",
+      "Tel": 46638859,
+      "username": "ahmed",
+      "Password": "1234"
+    },
+    {
+      "id": 3,
+      "nom": "Brahim",
+      "prenom": "Ali",
+      "Tel": 39994005,
+      "username": "Brahim",
+      "Password": "1234"
+    },
+    {
+      "nom": "Moahmed lemin",
+      "prenom": "Ahmed",
+      "Tel": 49915181,
+      "username": "MedLemin",
+      "Password": "36373903",
+      "id": 4
+    }
+  ],
+  "ChefService": [
+    {
+      "id": 2,
+      "nom": "Ahmed",
+      "prenom": "babe",
+      "Tel": 46638859,
+      "username": "ahmed",
+      "Password": "1234"
+    },
+    {
+      "id": 3,
+      "nom": "Brahim",
+      "prenom": "Ali",
+      "Tel": 39994005,
+      "username": "Brahim",
+      "Password": "1234"
+    },
+    {
+      "nom": "Moahmed lemin",
+      "prenom": "Ahmed",
+      "Tel": 49915181,
+      "username": "MedLemin",
+      "Password": "36373903",
+      "id": 4
+    }
+  ],
+  "Acc": [
     {
       "id": 2,
       "nom": "Ahmed",
