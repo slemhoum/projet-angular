@@ -8,40 +8,27 @@
       <div class="row">
         <div class="col-12">
   <div class="box">
-
-                <div class="box-body">
-                    <div class="table-responsive">
-                      <table id="example1" class="table table-bordered table-striped">
+    <div class="box-body">
+      <div class="table-responsive">
+        <table id="example1" class="table table-bordered table-striped">
           <thead>
             <tr>
-                                    <th>Description</th>
+              <th>Description</th>
               <th>Delais</th>
-                                  <th>Status</th>
-                                    <th>Action</th>
+              <th>Status</th>
+              <th>Action</th>
             </tr>
           </thead>
           <tbody>
-          <tr>
-          <td>Conception</td>
-
-             <td>3mois</td>
-
-
-              <td>   <span class="badge badge-success">Accepter</span></td>
-
+          <tr *ngFor="let d of Demandes">
+          <td>{{d.Description}}</td>
+             <td>{{d.Delais}}</td>
+             <td> <span class="badge badge-success">{{d.Status}}</span></td>
               <td>
-                                        <a  routerLink="/ajoutProjet" class="btn btn-outline-success"  ><i class="ti-check" aria-hidden="true"></i> Accepter</a>
-                                        <a href="" class="btn btn-outline-danger"><i class="ti-close" aria-hidden="true"> Refuser</i></a>
-
+                <a  [routerLink]="'/ajoutProjet'" class="btn btn-outline-success"  ><i class="ti-check" aria-hidden="true"></i> Accepter</a>
+                <a href="" class="btn btn-outline-danger"><i class="ti-close" aria-hidden="true"> Refuser</i></a>
               </td>
             </tr>
-
-
-
-
-
-
-
           </tbody>
         </table>
       </div>

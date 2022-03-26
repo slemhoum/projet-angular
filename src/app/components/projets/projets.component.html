@@ -24,35 +24,36 @@
                                     <th scope="col">Description</th>
                                     <th scope="col">Budget Total</th>
                                     <th scope="col">Budget Projet</th>
-                                    <th scope="col">delais</th>
+                                    <th scope="col">Delais</th>
                                     <th scope="col">Etat</th>
                    <th>Action</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-                                    <td th:text="${p.description}"></td>
-                                    <td th:text="${p.budgetTotal}"></td>
-                                    <td th:text="${p.budgetSpecific}"></td>
-                                    <td th:text="${p.delais}"></td>
+            <tr *ngFor="let p of projet">
+              <td>{{p.Description}}</td>
+              <td >{{p.BudgetTotal}}</td>
+              <td >{{p.Budget}}</td>
+              <td>{{p.Minimal}} jours</td>
 
-                                <td>
-                                            <div class="progress">
-                                                <div class="progress-bar progress-bar-primary progress-bar-striped"  role="progressbar" aria-valuenow="50"  aria-valuemax="100" style="width:50%">
+              <td>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-primary progress-bar-striped" aria-valuetext="70" role="progressbar" aria-valuenow="50"  aria-valuemax="100" style="width:50%">
 
-                                                </div>
-                                              </div></td>
+                  </div>
 
-                                            <td>
-                                                <a   routerLink="/detailProjet"  class="btn btn-circle btn-info btn-xs" data-toggle="tooltip" data-original-title="detail">
-                                                    <i class="ti-eye"></i>
-                                                </a>
-                                                <a  routerLink="/modifierProjet"  class="btn btn-circle btn-primary btn-xs" data-toggle="tooltip" data-original-title="modifier">
-                                                    <i class="ti-marker-alt"></i>
-                                                </a>
+                </div>
+              </td>
 
-                                                <a  href="" class="btn btn-circle btn-danger btn-xs" title="" data-toggle="tooltip" data-original-title="Supprimer"><i class="ti-trash"></i></a>
-                                            </td>
+              <td>
+                <a   routerLink="/detailProjet"  class="btn btn-circle btn-info btn-xs" data-toggle="tooltip" data-original-title="detail">
+                  <i class="ti-eye"></i>
+                </a>
+                <button  routerLink="/modifierProjet"    class="btn btn-circle btn-primary btn-xs" data-toggle="tooltip" data-original-title="modifier">
+                  <i class="ti-marker-alt"></i>
+                </button>
+                <button  class="btn btn-circle btn-danger btn-xs" title="" data-toggle="tooltip" (click)="deleteProjet(p)" data-original-title="Supprimer"><i class="ti-trash"></i></button>
+              </td>
             </tr>
 
 

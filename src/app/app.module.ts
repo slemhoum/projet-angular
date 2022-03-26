@@ -38,6 +38,8 @@ import { ServicesComponent } from './componentsMey/services/services.component';
 import { Client1Component } from './componentsMey/client1/client1.component';
 import { NavbarAccComponent } from './componentsMey/navbar-acc/navbar-acc.component';
 import { Navbar1Component } from './componentsMey/navbar1/navbar1.component';
+import {HttpClientModule} from "@angular/common/http";
+import {ReactiveFormsModule} from "@angular/forms";
 import { LoginComponent } from './login/login.component';
 import { MsgDangerComponent } from './msg-danger/smg-danger/msg-danger.component';
 
@@ -48,7 +50,6 @@ import { HomeAdminComponent } from './componentsMey/home-admin/home-admin.compon
   declarations: [
     AppComponent,
     TopNavBarChefServiceComponent,
-
     FooterComponent,
     HomeChefServiceComponent,
     ListeDemandesComponent,
@@ -71,7 +72,6 @@ import { HomeAdminComponent } from './componentsMey/home-admin/home-admin.compon
     Projet1Component,
     AjouterMembre1Component,
     AccComponent,
-
     ChefServiceComponent,
 LoginComponent,
 MsgDangerComponent,
@@ -88,6 +88,9 @@ HomeAdminComponent,
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     FormsModule
   ],

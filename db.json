@@ -1,0 +1,119 @@
+{
+  "Demande": [
+    {
+      "id": 1,
+      "Description": "Gestion agence",
+      "Delais": "2 mois",
+      "Status": "Accepter",
+      "Date": "29/2/2022"
+    },
+    {
+      "id": 2,
+      "Description": "Gestion Bank",
+      "Delais": "5 mois",
+      "Status": "Accepter",
+      "Date": "19/12/2021"
+    },
+    {
+      "id": 3,
+      "Description": "Gestion Vente",
+      "Delais": "4 mois",
+      "Status": "Accepter",
+      "Date": "29/4/2021"
+    },
+    {
+      "id": 4,
+      "Description": "Gestion Biblio",
+      "Delais": "1 mois",
+      "Status": "Accepter",
+      "Date": "23/3/2022"
+    }
+  ],
+
+
+
+  "ChefProjet": [
+    {
+      "id": 2,
+      "nom": "Ahmed",
+      "prenom": "babe",
+      "Tel": 46638859,
+      "username": "ahmed",
+      "Password": "1234"
+    },
+    {
+      "id": 3,
+      "nom": "Brahim",
+      "prenom": "Ali",
+      "Tel": 39994005,
+      "username": "Brahim",
+      "Password": "1234"
+    },
+    {
+      "nom": "Moahmed lemin",
+      "prenom": "Ahmed",
+      "Tel": 49915181,
+      "username": "MedLemin",
+      "Password": "36373903",
+      "id": 4
+    }
+  ],
+
+  "Member": [
+    {
+      "id": 1,
+      "nom": "Ahmed",
+      "prenom": "babe",
+      "Tel": 46638859
+
+    },
+    {
+      "id": 2,
+      "nom": "Sidi",
+      "prenom": "Ali",
+      "Tel": 39994005
+
+    },
+    {
+      "id": 3,
+      "nom": "Moahmed ",
+      "prenom": "Ahmed",
+      "Tel": 49915181
+
+    }
+  ],
+  "Projet": [
+    {
+      "id": 2,
+      "Description": "Gestion Bank",
+      "BudgetTotal": 7000,
+      "Budget": 5000,
+      "Minimal": 3000,
+      "Etat": 50
+    },
+    {
+      "id": 3,
+      "Description": "Gestion Vente",
+      "BudgetTotal": 19000,
+      "Budget": 14000,
+      "Minimal": 10000,
+      "Etat": 50
+    },
+    {
+      "id": 4,
+      "Description": "Biblio",
+      "BudgetTotal": 17000,
+      "Budget": 15000,
+      "Minimal": 13000,
+      "Etat": 50
+    },
+    {
+      "Description": "Application pour la Gestion de pièces des recharges auto",
+      "BudgetTotal": 50000,
+      "Budget": 3000,
+      "Minimal": 0,
+      "Etat": null,
+      "id": 6
+    }
+  ]
+}

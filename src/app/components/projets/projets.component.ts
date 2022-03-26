@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {Demande} from "../../model/demande.model";
+import {projet} from "../../model/projet.model";
+import {ProjetsService} from "../../services/projet.service";
 
 @Component({
   selector: 'app-projets',
@@ -7,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjetsComponent implements OnInit {
 
-  constructor() { }
+  projet:projet[] |null=null;
+  constructor(private ProjetsService:ProjetsService) {
+    this.ProjetsService.getAllProjet().subscribe(data=>{
+      this.projet=data;
+    })
+  }
 
   ngOnInit(): void {
   }
 
+
+  deleteProjet(p:any) {
+
+    this.ProjetsService.deleteData(p.id).subscribe(a => {
+      alert("Record Deleted Succesfully");
+      this.ProjetsService.getAllProjet();
+    })
+  }
 }

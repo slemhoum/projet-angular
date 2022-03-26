@@ -17,67 +17,53 @@
                 <h4 class="box-title">Modifier Projet</h4>
               </div>
             <div class="box-body">
-              <form th:action="@{addP}" method="Post">
-                    <div class="form-body">
-                        <div class="row">
+              <form [formGroup]="formValue">
+                <div class="form-body">
+                  <div class="row">
 
-                            <!--/span-->
+                    <!--/span-->
 
-                            <div class="col-lg-12">
-                                <div class="form-group">
-                                    <label class="font-weight-700 font-size-16">Description</label>
-                                    <input type="text" class="form-control"  th:value=${demande.description} name="description">
-                                    <input type="hidden" th:value=${service.id}  name="id1">
-                                  <input type="hidden" th:value=${client.id}  name="id2">
-                                 </div>
+                    <div class="col-lg-12">
+                      <div class="form-group">
+                        <label class="font-weight-700 font-size-16">Description</label>
+                        <input type="text" class="form-control" formControlName="Description"   name="description">
+                        <input type="hidden"  name="id1">
+                        <input type="hidden"  name="id2">
+                      </div>
 
-                            </div>
-
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label class="font-weight-700 font-size-16">Delais</label>
-                                    <input type="text" class="form-control" th:value=${demande.delais}    name="delais">
-                                 </div>
-
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label class="font-weight-700 font-size-16">Budget Total</label>
-                                    <input type="number" class="form-control" placeholder="budget total" name="budgetTotal">
-                                 </div>
-
-                            </div>
-
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label class="font-weight-700 font-size-16">Budget</label>
-                                    <input type="number" class="form-control" placeholder="budget" name="budgetSpecific">
-                                 </div>
-
-
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label class="form-label">Minimal</label>
-                                    <select class="form-control select2" style="width: 100%;">
-                                      <option selected="selected">Alabama</option>
-                                      <option>Alaska</option>
-                                      <option>California</option>
-                                      <option>Delaware</option>
-                                      <option>Tennessee</option>
-                                      <option>Texas</option>
-                                      <option>Washington</option>
-                                    </select>
-                                  </div>
-
-                            </div>
-                            <div class="form-actions mt-10">
-                                <button type="submit" class="btn btn-primary"> <i class="fa fa-check"></i> Enregistrer</button>
-                                <button type="reset" class="btn btn-danger">Annuler</button>
-                            </div>
-                        </div>
                     </div>
-                        </form>
+
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label class="font-weight-700 font-size-16">Delais</label>
+                        <input type="text" class="form-control"  formControlName="delais"   >
+                      </div>
+
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label class="font-weight-700 font-size-16">Budget Total</label>
+                        <input type="number" class="form-control" placeholder="budget total" formControlName="BudgetTotal">
+                      </div>
+
+                    </div>
+
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label class="font-weight-700 font-size-16">Budget</label>
+                        <input type="number" class="form-control" placeholder="budget" formControlName="Budget">
+                      </div>
+
+
+                    </div>
+
+                    <div class="form-actions mt-10">
+                      <button type="submit" (click)="updateEmployeeDetails()" class="btn btn-primary m-lg-3"> <i class="fa fa-check"></i> Modifier</button>
+                      <button type="reset" class="btn btn-danger">Annuler</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
 
 
                     </div>
