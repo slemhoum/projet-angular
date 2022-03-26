@@ -11,7 +11,7 @@ import {UtilService} from "../services/util.service";
 export class LoginComponent implements OnInit {
   public msgErr = false;
   public user: IUser = {
-    dateN: "", email: "", firstName: "", id: 0, mdp: "", profil: "", tel: ""
+    dateN: "", email: "", firstName: "", id: 0, mdp: "", profil: "", tel: "Admin"
   }
 
   constructor(private auth: AuthService, private util: UtilService) { }
@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
       else{
         if (user.tel=="admin"){this.util.navigateTo("homeAdmin");}
        else{
-         if (user.tel=="accueil"){this.util.navigateTo("Acc");}
+         if (user.tel=="accueil"){this.util.navigateTo("client");}
          else{this.util.navigateTo("homeChefProjet");}
         }
       }

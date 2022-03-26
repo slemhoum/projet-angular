@@ -52,11 +52,15 @@ const routes: Routes = [
   {path:"detailProjet1",component:   DetailprojetsComponent },
   {path:"ajouterPhase",component:  AjouterPhaseComponent },
   {path:"modifierPhase",component:  ModifierPhaseComponent },
-  {path:"",component:  LoginComponent },
-
+  {path:"login",component:  LoginComponent },
+ {path:"",component:  LoginComponent },
   {
     path: 'Acc',
     component: AccComponent
+  },
+  {
+    path: 'demande',
+    component: DemandeAccComponent
   },
   {
     path: 'Service',
